@@ -34,13 +34,13 @@ class Time:
         return 0
     
     def __eq__(self, other):
-        return True if self._cmp(self, other) == 0 else False
+        return self._cmp(self, other) == 0
     
     def __lt__(self, other):
-        return True if self._cmp(self, other) == 1 else False
+        return self._cmp(self, other) == 1
     
     def __le__(self, other):
-        return True if (self._cmp(self, other) == 0 or self._cmp(self, other) == 1)  else False
+        return self._cmp(self, other) in [0, 1]
 
 t1 = Time(13, 10, 5)
 t2 = Time(5, 15, 30)

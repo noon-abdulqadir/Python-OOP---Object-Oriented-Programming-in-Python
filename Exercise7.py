@@ -18,7 +18,7 @@ class Employee:
         domain = str(new_email.split('@')[1])
         if domain in Employee.allowed_domains:
             self._email = new_email
-        elif domain not in Employee.allowed_domains:
+        else:
             raise RuntimeError(f"Domain {domain} is not allowed.")
     
     def display(self):

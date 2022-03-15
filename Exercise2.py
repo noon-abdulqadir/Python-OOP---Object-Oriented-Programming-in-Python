@@ -14,7 +14,7 @@ class Book():
     
 # Question 3
     def in_stock(self):
-        return True if self.copies > 0 else False
+        return self.copies > 0
     
     def sell(self):
         if self.in_stock():
