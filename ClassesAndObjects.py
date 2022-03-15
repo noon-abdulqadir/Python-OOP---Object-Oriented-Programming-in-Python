@@ -41,8 +41,7 @@ class Person():
         
     @property  # without a setter, the property (aka getter) becomes read-only
     def fullname(self):
-        fullname = self._title + " " + self.__name
-        return(fullname)
+        return f'{self._title} {self.__name}'
     
     @property  # without a getter functionality, the setter becomes write-only
     def maritalStatus(self):
@@ -89,10 +88,10 @@ p2.greet()
 print(p1.title)
 print(p2.title)
 
-title = p1.title + "Ted"
+title = f'{p1.title}Ted'
 print(title)
 p1.title = "Mrs."
-title = p1.title + "Ted"
+title = f'{p1.title}Ted'
 print(title)
 
 p1.age = 25

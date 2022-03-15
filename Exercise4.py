@@ -12,11 +12,10 @@ class Product():
     
     @property
     def discount(self):
-        if self.marked_price > 500:
-            print(f'Product price is over $500.\nNew discount in percentage: {self._discount + 2}%')
-            return self._discount + 2
-        else:
+        if self.marked_price <= 500:
             return self._discount
+        print(f'Product price is over $500.\nNew discount in percentage: {self._discount + 2}%')
+        return self._discount + 2
  
     @discount.setter
     def discount(self, new_discount):

@@ -26,10 +26,7 @@ class Length:
     def __add__(self, other):
         if isinstance(other, Length):
             return self.add_length(other)
-        if isinstance(other, int):
-            return self.add_inches(other)
-        else:
-            return NotImplemented
+        return self.add_inches(other) if isinstance(other, int) else NotImplemented
     
     def __radd__(self, other):
         return self.__add__(other)
